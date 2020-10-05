@@ -1,8 +1,6 @@
 ![GA Logo](https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png)
 
-# MEN Stack Homework
-
-This weekend you are going to create an express app from scratch, whatever model you want.
+# MEN Stack
 
 **Read this *entire* page before you start**
 
