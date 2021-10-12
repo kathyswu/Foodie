@@ -13,7 +13,7 @@
         <div class="title">
           <h3> <%= review.restaurant; %> </h3>
           <h4> <%= review.location; %></h4>
-          <h4><%= review.date; %> </h4>
+          <h4><%= review.date.toLocaleDateString("en-US", {weekday: 'short', year: 'numeric', month: 'short',  day:'numeric', hour:'numeric', minute:'numeric'}); %> </h4>
         </div>
         <div class="image">
           <img src="<%= review.image %>">

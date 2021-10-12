@@ -36,7 +36,7 @@ header {
     justify-items: center;
     align-items: flex-start;
     width: 100%;
-    background-color:rgba(222, 222, 228, 0.5);
+    background-color:rgba(191, 188, 207, 0.329);
 
     .nav-links{
       display: grid;
@@ -44,7 +44,6 @@ header {
       grid-template-rows: 50px;
       justify-items: center;
       align-items: center;
-
     }
 
     h1 {
@@ -60,14 +59,14 @@ header {
       font-family: "Khand", sans-serif;
     }
     a:hover {
-      color: dimgray;
+      color: darken(dimgray, 80%);
     }
   }
 }
 
 // Gallery container of reviews
 .container {
-  margin-left: 50px;
+  margin: -100px 0 0 50px;
   border: 2px solid red;
   padding: 20px;
   display: grid;
@@ -75,10 +74,27 @@ header {
   grid-template-rows: 500px 500px 500px;
   justify-content: center;
   align-items: center;
-  gap: 100px 100px;
+  gap: 400px 50px;
 
-  img {
+  .review-card{
+    font-size: 16px;
+    font-family: 'Josefin Sans', sans-serif;
     width: 500px;
     height: 500px;
+    padding: 20px;
+    border: 2px solid lightcoral;
   }
+
+  h3 {
+    font-weight: 600;
+    font-size: 24px;
+    
+  }
+
+  img {
+    width: 400px;
+    height: 400px;
+    border-radius: 20px;
+  }
+
 }
