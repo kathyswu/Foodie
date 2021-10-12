@@ -14,29 +14,29 @@
           <img src="<%= review.image %>">
         </div>
         <div class="info-card">
-        <div class="title">
-          <h3> <%= review.restaurant; %> </h3>
-          <h4> <%= review.location; %></h4>
-          <h4><%= review.date.toLocaleDateString("en-US", {weekday: 'short', year: 'numeric', month: 'short',  day:'numeric', hour:'numeric', minute:'numeric'}); %> </h4>
-        </div>
-        <div class="text">
-          <% for(let i = 1; i <= 5; i++) { %>
-            <% if (i <= review.rating) {%>
-            <span class="icon">
-              <i class="fas fa-star gold"></i>
-            </span>
-            <% } else { %>
-            <span class="icon">
-              <i class="fas fa-star"></i>
-            </span>
-          <% } }%>
-          <h5> <%= review.content %></h5>
-        </div>
-        <div class="tags">
-          <% for (let i = 0; i < review.tags.length; i++) {%>
-          <p><%= review.tags[i] %></p>
-          <% } %>
-        </div>
+          <div class="title">
+            <h3> <%= review.restaurant; %> </h3>
+            <h4> <%= review.location; %></h4>
+            <h4><%= review.date.toLocaleDateString("en-US", {weekday: 'short', year: 'numeric', month: 'short',  day:'numeric', hour:'numeric', minute:'numeric'}); %> </h4>
+          </div>
+          <div class="text">
+            <% for(let i = 1; i <= 5; i++) { %>
+              <% if (i <= review.rating) {%>
+              <span class="icon">
+                <i class="fas fa-star gold"></i>
+              </span>
+              <% } else { %>
+              <span class="icon">
+                <i class="fas fa-star"></i>
+              </span>
+            <% } }%>
+            <h5> <%= review.content %></h5>
+          </div>
+          <div class="tags">
+            <% for (let i = 0; i < review.tags.length; i++) {%>
+            <p><%= review.tags[i] %></p>
+            <% } %>
+          </div>
       </div>
       </article>
     <% } %>

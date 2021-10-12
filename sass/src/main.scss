@@ -18,7 +18,7 @@ body {
 .outside-container {
   display: grid;
   grid-template-columns: 100%;
-  grid-template-rows: 400px;
+  grid-template-rows: 120px auto;
   justify-content: center;
   align-items: flex-start;
   text-align: center;
@@ -36,11 +36,12 @@ header {
     justify-items: center;
     align-items: flex-start;
     width: 100%;
-    background-color:rgba(191, 188, 207, 0.329);
+    background-color:rgba(189, 188, 188, 0.8);
+    z-index: 2;
 
     .nav-links{
       display: grid;
-      grid-template-columns: 150px 150px;
+      grid-template-columns: 160px 160px;
       grid-template-rows: 50px;
       justify-items: center;
       align-items: center;
@@ -53,24 +54,26 @@ header {
       grid-column-end: span 2;
     }
     a {
-      color: dimgray;
+      color: white;
       text-decoration: none;
       font-size: 24px;
       font-family: "Khand", sans-serif;
     }
     a:hover {
-      color: darken(dimgray, 80%);
+      background-color: rgba(54, 54, 54, 0.411);
+      padding: 0px 15px;
+      border-radius: 5px;
     }
   }
 }
 
 // Gallery container of reviews
 .container {
-  margin: -150px 0 0 50px;
+  margin: 10px 0 0 50px;
   padding: 20px;
   display: grid;
   grid-template-columns: 500px 500px 500px;
-  grid-template-rows: 500px 500px 500px;
+  grid-template-rows: 500px 500px 500px auto;
   justify-content: center;
   align-items: center;
   gap: 30px;
@@ -120,5 +123,41 @@ header {
   .gold {
     color: gold;
     
+  }
+}
+
+@media only screen and (min-width: 1200px) and(max-width: 1500px) {
+  .container{
+    margin: 0;
+    transform: scale(0.85);
+  }
+}
+
+@media only screen and (min-width: 990px) and(max-width: 1200px) {
+  .container{
+    display: flex;
+    flex-flow: row wrap;
+    margin: 0;
+    transform: scale(0.9);
+    gap: 50px;
+  }
+}
+
+@media only screen and (min-width: 100px) and(max-width: 990px) {
+  .outside-container{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    
+    .container{
+      display: flex;
+      margin: 0;
+      flex-flow: row wrap;
+      align-items: center;
+      transform: scale(0.9);
+      gap: 80px;
+    }
   }
 }
