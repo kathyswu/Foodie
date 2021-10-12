@@ -35,6 +35,7 @@ const ReviewSchema = new Schema (
       tags: {
         type: [String],
         minLength: [3, "Tag must be 3 characters long"],
+        
       }
   },
   {

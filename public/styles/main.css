@@ -66,7 +66,7 @@ header nav a:hover {
   grid-template-rows: 500px 500px 500px;
   justify-content: center;
   align-items: center;
-  gap: 400px 50px;
+  gap: 100px 50px;
 }
 .container .review-card {
   font-size: 16px;
@@ -75,15 +75,35 @@ header nav a:hover {
   height: 500px;
   padding: 20px;
   border: 2px solid lightcoral;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 33% 33% 33%;
 }
 .container h3 {
   font-weight: 600;
   font-size: 24px;
 }
 .container img {
-  width: 400px;
-  height: 400px;
+  width: 450px;
+  height: 450px;
   border-radius: 20px;
+}
+.container .info-card {
+  display: none;
+  z-index: 1;
+  margin: -120px 0 0 30px;
+  background-color: rgba(224, 224, 224, 0.6);
+  width: 395px;
+  height: 390px;
+  border-radius: 20px;
+  padding: 10px;
+}
+.container .image:hover ~ .info-card {
+  display: block;
+  transform: scale(1.15);
+}
+.container .gold {
+  color: goldenrod;
 }
 
 /*# sourceMappingURL=main.css.map */

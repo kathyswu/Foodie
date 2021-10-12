@@ -78,7 +78,7 @@ Review.deleteMany({}, function(error, deletedReviews){
       image: 'https://i.imgur.com/pHtBpGn.jpeg',
       date: new Date(2021, 10, 10, 19, 30),
       location: '1723 Buchanan St, San Francisco, California',
-      tags: ["korean","classic","soondubu","soft tofu stew","tteokbokki", "beef short ribs"],
+      tags: ["korean","classic","soft tofu stew","tteokbokki", "beef short ribs"],
     },
     {
       restaurant: 'Sasa',
