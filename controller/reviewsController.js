@@ -1,8 +1,9 @@
 const express = require("express");
 
 const router = express.Router();
-const { Review } = require("../models/Review");
-// base url === /reviews
+const { Review } = require("../models");
+
+// base url === /foodie
 
 //get review index
 router.get("/", function(req, res, next) {
