@@ -107,7 +107,7 @@ header {
     display: none;
     z-index: 1;
     margin: -106px 0 0 29px;
-    background-color:rgba(224, 224, 224, 0.6);
+    background-color:rgba(224, 224, 224, 0.8);
     width: 392px;
     height: 392px;
     border-radius: 20px;
@@ -122,8 +122,13 @@ header {
 
   .gold {
     color: gold;
-    
+    font-size: 24px;
   }
+  .silver {
+    color: dimgray;
+    font-size: 24px;
+  }
+
 }
 
 @media only screen and (min-width: 1200px) and(max-width: 1500px) {
