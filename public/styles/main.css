@@ -58,23 +58,21 @@ header nav a:hover {
 }
 
 .container {
-  margin: -100px 0 0 50px;
-  border: 2px solid red;
+  margin: -150px 0 0 50px;
   padding: 20px;
   display: grid;
   grid-template-columns: 500px 500px 500px;
   grid-template-rows: 500px 500px 500px;
   justify-content: center;
   align-items: center;
-  gap: 100px 50px;
+  gap: 30px;
 }
 .container .review-card {
   font-size: 16px;
   font-family: "Josefin Sans", sans-serif;
-  width: 500px;
-  height: 500px;
+  width: 450px;
+  height: 450px;
   padding: 20px;
-  border: 2px solid lightcoral;
   display: grid;
   grid-template-columns: 100%;
   grid-template-rows: 33% 33% 33%;
@@ -91,10 +89,10 @@ header nav a:hover {
 .container .info-card {
   display: none;
   z-index: 1;
-  margin: -120px 0 0 30px;
+  margin: -106px 0 0 29px;
   background-color: rgba(224, 224, 224, 0.6);
-  width: 395px;
-  height: 390px;
+  width: 392px;
+  height: 392px;
   border-radius: 20px;
   padding: 10px;
 }
@@ -103,7 +101,7 @@ header nav a:hover {
   transform: scale(1.15);
 }
 .container .gold {
-  color: goldenrod;
+  color: gold;
 }
 
 /*# sourceMappingURL=main.css.map */
