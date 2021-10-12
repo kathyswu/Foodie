@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "watch-sass": "sass -w sass/src:public/styles",
     "watch-nodemon": "nodemon server.js",
-    "dev": "open http://localhost:4000/ && concurrently --handle-input -n server,sass -c 'bgGreen.bold, bgPink.bold' 'npm:watch-sass' 'npm:watch-nodemon' rs",
+    "dev": "open http://localhost:4000/ && concurrently --handle-input -n server,sass -c 'bgGreen.bold, bgYellow.bold' 'npm:watch-sass' 'npm:watch-nodemon' rs",
     "start": "node server.js"
   },
   "repository": {

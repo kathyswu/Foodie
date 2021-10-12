@@ -2,13 +2,14 @@
 <html lang="en">
 <%- include('./partials/head/_head', { page: "Foodie"} ) %>
 <body>
+  <div class="outside-container">
   <header>
-    <h1> Foodie </h1>
+    <%- include('./partials/nav/_nav') %>
   </header>
   <div class="container">
     <% for (let i = 0; i < reviews.length; i++) {%>
     <% const review = reviews[i]; %>
-      <article class="review">
+      <article class="review-card">
         <div class="title">
           <h3> <%= review.restaurant; %> </h3>
           <h4> <%= review.location; %></h4>
@@ -38,5 +39,6 @@
       </article>
     <% } %>
   </div>
+</div>
 </body>
 </html>

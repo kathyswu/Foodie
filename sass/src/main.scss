@@ -1,1 +1,84 @@
+@import url("https://fonts.googleapis.com/css2?family=Lily+Script+One&display=swap");
 
+@import url("https://fonts.googleapis.com/css2?family=Khand:wght@400;500&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,300;0,400;0,600;1,300&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
+.outside-container {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 400px;
+  justify-content: center;
+  align-items: flex-start;
+  text-align: center;
+}
+
+// Header Nav
+header {
+  width: 100%;
+
+  nav {
+    position: fixed;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 1fr 50px;
+    justify-items: center;
+    align-items: flex-start;
+    width: 100%;
+    background-color:rgba(222, 222, 228, 0.5);
+
+    .nav-links{
+      display: grid;
+      grid-template-columns: 150px 150px;
+      grid-template-rows: 50px;
+      justify-items: center;
+      align-items: center;
+
+    }
+
+    h1 {
+      font-family: "Lily Script One", cursive;
+      font-size: 115px;
+      margin: 10px;
+      grid-column-end: span 2;
+    }
+    a {
+      color: dimgray;
+      text-decoration: none;
+      font-size: 24px;
+      font-family: "Khand", sans-serif;
+    }
+    a:hover {
+      color: dimgray;
+    }
+  }
+}
+
+// Gallery container of reviews
+.container {
+  margin-left: 50px;
+  border: 2px solid red;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 500px 500px 500px;
+  grid-template-rows: 500px 500px 500px;
+  justify-content: center;
+  align-items: center;
+  gap: 100px 100px;
+
+  img {
+    width: 500px;
+    height: 500px;
+  }
+}

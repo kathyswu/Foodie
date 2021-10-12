@@ -16,6 +16,9 @@ const PORT = 4000;
 // use ejs
 app.set("view engine", "ejs");
 
+// public directory for styles and scripts
+app.use(express.static("public"));
+
 // Default Routes
 
 // Redirect to Reviews Home
