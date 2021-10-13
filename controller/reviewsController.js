@@ -24,8 +24,8 @@ router.get("/", function(req, res, next) {
 router.get("/:id", function (req, res, next){
   Review.findById(req.params.id, function(error, foundReview){
     if (error) {
-      req.error = error;
       console.log(error);
+      req.error = error;
       return next();
     }
     const context = {
@@ -56,8 +56,8 @@ router.post("/", function(req, res, next) {
 router.get("/:id/edit", function(req, res, next){
   Review.findById(req.params.id, function (error, foundReview){
     if (error) {
-      req.error = error;
       console.log(error);
+      req.error = error;
       return next();
     }
     const context = {
@@ -71,11 +71,17 @@ router.get("/:id/edit", function(req, res, next){
 //Update
 router.put("/:id");
 
-//Delete
+//Delete route
 router.delete("/:id", function (req, res, next){
-
+  Review.findByIdAndDelete(req.params.id, function (error, deletedReview) {
+    if (error) {
+      console.log(error);
+      req.error = error;
+      return next();
+    }
+    return res.redirect("/foodie");
+  })
 });
-
 
 
 //4. export router

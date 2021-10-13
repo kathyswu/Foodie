@@ -161,6 +161,19 @@ p {
 .review-container h5 {
   font-size: 14px;
 }
+.review-container .delete {
+  margin: 20px 5px;
+  padding: 5px;
+  background-color: blanchedalmond;
+  border-radius: 5px;
+  border: 3px solid blanchedalmond;
+  font-family: "Josefin Sans", sans-serif;
+}
+.review-container .delete:hover {
+  border: 2px solid #ce6161;
+  background-color: #d37777;
+  box-shadow: 1px 1px 5px dimgray;
+}
 
 @media only screen and (min-width: 1200px) and (max-width: 1500px) {
   .gallery-container {

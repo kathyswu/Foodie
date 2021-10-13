@@ -27,6 +27,9 @@
       <% for (let i = 0; i < reviews.tags.length; i++) {%>
       <p><%= reviews.tags[i] %></p>
       <% } %>
+      <form action="/foodie/<%= reviews.id %>?_method=DELETE" method="POST">
+        <input class="delete" type="submit" value="Delete Review">
+      </form>
     </div>
   </article>
   </div>
