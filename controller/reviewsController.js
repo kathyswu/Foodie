@@ -52,7 +52,7 @@ router.post("/", function(req, res, next) {
 
 
 
-//Edit route FIXME fix route on nav href links
+//Edit
 router.get("/:id/edit", function(req, res, next){
   Review.findById(req.params.id, function (error, foundReview){
     if (error) {

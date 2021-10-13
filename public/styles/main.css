@@ -37,9 +37,9 @@ header nav {
 }
 header nav .nav-links {
   display: grid;
-  grid-template-columns: 160px 160px;
+  grid-template-columns: 100%;
   grid-template-rows: 50px;
-  justify-items: center;
+  justify-items: flex-end;
   align-items: center;
 }
 header nav h1 {
@@ -161,6 +161,23 @@ p {
 .review-container h5 {
   font-size: 14px;
 }
+.review-container .buttons-container {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: 120px 120px;
+  grid-template-rows: 100%;
+}
+.review-container .edit {
+  margin: 20px 5px;
+  padding: 6px 0px;
+  width: 100px;
+  background-color: blanchedalmond;
+  border-radius: 5px;
+  border: 1px solid blanchedalmond;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 14px;
+  text-align: center;
+}
 .review-container .delete {
   margin: 20px 5px;
   padding: 5px;
@@ -169,10 +186,11 @@ p {
   border: 3px solid blanchedalmond;
   font-family: "Josefin Sans", sans-serif;
 }
-.review-container .delete:hover {
+.review-container .delete:hover, .review-container .edit:hover {
   border: 2px solid #ce6161;
   background-color: #d37777;
   box-shadow: 1px 1px 5px dimgray;
+  cursor: pointer;
 }
 
 @media only screen and (min-width: 1200px) and (max-width: 1500px) {
@@ -180,6 +198,10 @@ p {
     margin: 10px;
     transform: scale(0.85);
     gap: 50px;
+  }
+
+  .review-container {
+    margin-top: 150px;
   }
 }
 @media only screen and (min-width: 990px) and (max-width: 1200px) {
@@ -189,6 +211,11 @@ p {
     margin: 0;
     transform: scale(0.9);
     gap: 50px;
+  }
+
+  .review-container {
+    margin: 150px 100px;
+    transform: scale(0.9);
   }
 }
 @media only screen and (min-width: 100px) and (max-width: 990px) {
@@ -207,6 +234,13 @@ p {
     align-items: center;
     transform: scale(0.9);
     gap: 80px;
+  }
+
+  .review-container {
+    margin: 220px 100px;
+    transform: scale(0.8);
+    display: flex;
+    flex-flow: row wrap;
   }
 }
 
