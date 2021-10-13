@@ -1,19 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-<%- include('./partials/head/_head', { page: "Foodie"} ) %>
+<%- include('./partials/head/_head', { page: "All Reviews"} ) %>
 <body>
   <div class="outside-container">
   <header>
     <%- include('./partials/nav/_nav') %>
   </header>
-  <div class="container">
+  <div class="gallery-container">
     <% for (let i = 0; i < reviews.length; i++) {%>
     <% const review = reviews[i]; %>
       <article class="review-card">
         <div class="image">
           <img src="<%= review.image %>">
         </div>
-        <div class="info-card">
+        <div class="info-card"><a href="/foodie/<%= review.id %>">
           <div class="title">
             <h3> <%= review.restaurant; %> </h3>
             <h4> <%= review.location; %></h4>
@@ -37,6 +37,7 @@
             <p><%= review.tags[i] %></p>
             <% } %>
           </div>
+        </a>
       </div>
       </article>
     <% } %>

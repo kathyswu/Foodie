@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('./partials/head/_head', { page: "Review" }) %>
+<body>
+  <div class="outside-container">
+    <header>
+      <%- include('./partials/nav/_nav') %>
+    </header>
+  
+  <article class="review-container">
+    <img src="<%= reviews.image %>">
+    <div class="right">
+      <h3> <%= reviews.restaurant; %> </h3>
+      <h4> <%= reviews.location; %></h4>
+      <h4><%= reviews.date.toLocaleDateString("en-US", {weekday: 'short', year: 'numeric', month: 'short',  day:'numeric', hour:'numeric', minute:'numeric'}); %> </h4>
+      <% for(let i = 1; i <= 5; i++) { %>
+        <% if (i <= reviews.rating) {%>
+        <span class="icon">
+          <i class="fas fa-star gold"></i>
+        </span>
+        <% } else { %>
+        <span class="icon">
+          <i class="fas fa-star silver"></i>
+        </span>
+      <% } }%>
+      <h5>"<%= reviews.content %>"</h5>
+      <% for (let i = 0; i < reviews.tags.length; i++) {%>
+      <p><%= reviews.tags[i] %></p>
+      <% } %>
+    </div>
+  </article>
+  </div>
+</body>
+</html>

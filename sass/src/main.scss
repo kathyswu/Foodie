@@ -68,8 +68,8 @@ header {
 }
 
 // Gallery container of reviews
-.container {
-  margin: 10px 0 0 50px;
+.gallery-container {
+  margin: 80px 0 0 50px;
   padding: 20px;
   display: grid;
   grid-template-columns: 500px 500px 500px;
@@ -77,69 +77,117 @@ header {
   justify-content: center;
   align-items: center;
   gap: 30px;
+}
 
-  .review-card{
-    font-size: 16px;
-    font-family: 'Josefin Sans', sans-serif;
-    width: 450px;
-    height: 450px;
-    padding: 20px;
-    display: grid;
-    grid-template-columns: 100%;
-    grid-template-rows: 33% 33% 33%;
-  }
+h3 {
+  font-weight: 600;
+  font-size: 24px; 
+}
 
-  h3 {
-    font-weight: 600;
-    font-size: 24px; 
-  }
+.review-card{
+  font-size: 16px;
+  font-family: 'Josefin Sans', sans-serif;
+  width: 450px;
+  height: 450px;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 33% 33% 33%;
+}
 
 // Images of the review
-  img {
-    width: 450px;
-    height: 450px;
-    border-radius: 20px;
-    //transition: transform 0.2s;
-  }
+img {
+  width: 450px;
+  height: 450px;
+  border-radius: 20px;
+  object-fit: cover;
+}
 
-  //display the info of the review on hover
-  .info-card{
-    display: none;
-    z-index: 1;
-    margin: -106px 0 0 29px;
-    background-color:rgba(224, 224, 224, 0.8);
-    width: 392px;
-    height: 392px;
-    border-radius: 20px;
-    padding: 10px;
-  }
+//display the info of the review on hover
+.info-card{
+  display: none;
+  z-index: 1;
+  margin: -106px 0 0 29px;
+  padding: 10px;
+  background-color:rgba(224, 224, 224, 0.8);
+  width: 392px;
+  height: 392px;
+  border-radius: 20px;
+}
 
-  .image:hover ~ .info-card {
-    display: block;
-    transform: scale(1.15);
-
-  }
-
-  .gold {
-    color: gold;
-    font-size: 24px;
-  }
-  .silver {
-    color: dimgray;
-    font-size: 24px;
-  }
+.image:hover ~ .info-card {
+  display: block;
+  transform: scale(1.15);
 
 }
 
-@media only screen and (min-width: 1200px) and(max-width: 1500px) {
-  .container{
+a {
+  text-decoration: none;
+  color: black;
+}
+a:visited {
+  text-decoration: none;
+  color: black;
+
+}
+
+.gold {
+  color: gold;
+  font-size: 24px;
+}
+
+.silver {
+  color: dimgray;
+  font-size: 24px;
+}
+
+// Tags styling
+p {
+  display: inline-flex;
+  flex-flow: row wrap;
+  background-color: rgba(146, 146, 146, 0.7);
+  padding: 5px 10px;
+  border-radius: 8px;
+  margin: 5px 3px;
+}
+
+// For show page
+.review-container {
+  display: grid;
+  grid-template-columns: 480px 450px;
+  grid-template-rows: 100%;
+  margin: 150px 200px;
+
+  .right {
+    font-family: 'Josefin Sans', sans-serif;
+    padding: 20px;
     margin: 0;
+    text-align: left;
+  }
+  h3 {
+    font-size: 28px;
+    font-weight: 600;
+  }
+  h4 {
+    font-size: 18px;
+  }
+  h5 {
+    font-size: 14px;
+  }
+}
+
+
+
+@media only screen and (min-width: 1200px) and(max-width: 1500px) {
+  .gallery-container{
+    margin: 10px;
     transform: scale(0.85);
+    gap: 50px;
   }
 }
 
 @media only screen and (min-width: 990px) and(max-width: 1200px) {
-  .container{
+  .gallery-container{
     display: flex;
     flex-flow: row wrap;
     margin: 0;
@@ -156,13 +204,13 @@ header {
     align-items: center;
     align-content: center;
     
-    .container{
-      display: flex;
-      margin: 0;
-      flex-flow: row wrap;
-      align-items: center;
-      transform: scale(0.9);
-      gap: 80px;
-    }
+  }
+  .gallery-container{
+    display: flex;
+    margin: 0;
+    flex-flow: row wrap;
+    align-items: center;
+    transform: scale(0.9);
+    gap: 80px;
   }
 }

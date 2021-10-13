@@ -5,7 +5,7 @@ const { Review } = require("../models");
 
 // base url === /foodie
 
-//get review index
+//Index route
 router.get("/", function(req, res, next) {
   Review.find({}, function (error, allReviews) {
     if(error) { 
@@ -20,13 +20,63 @@ router.get("/", function(req, res, next) {
   })
 });
 
-//post review create
+//Show route
+router.get("/:id", function (req, res, next){
+  Review.findById(req.params.id, function(error, foundReview){
+    if (error) {
+      req.error = error;
+      console.log(error);
+      return next();
+    }
+    const context = {
+      reviews: foundReview,
+    };
+    res.render("show", context);
+    }
+  )
+});
+
+
+//New
+router.get("/new", function(req, res){
+  
+});
+
+//Create
 router.post("/", function(req, res, next) {
   res.send({
     message: "Create new review",
     body: req.body,
   });
 })
+
+
+
+//Edit route FIXME fix route on nav href links
+router.get("/:id/edit", function(req, res, next){
+  Review.findById(req.params.id, function (error, foundReview){
+    if (error) {
+      req.error = error;
+      console.log(error);
+      return next();
+    }
+    const context = {
+      reviews: foundReview,
+    }
+    res.render("edit", context);
+  })
+});
+
+
+//Update
+router.put("/:id");
+
+//Delete
+router.delete("/:id", function (req, res, next){
+
+});
+
+
 
 //4. export router
 module.exports = router;

@@ -11,8 +11,8 @@ mongoose.connection.on("connected", function() {
   console.log("MongoDB connected ... 🟢");
 });
 
-mongoose.connection.on("error", function() {
-  console.log("MongoDB connection error ... 🟡");
+mongoose.connection.on("error", function(error) {
+  console.log("MongoDB connection error ... 🟡", error);
 });
 
 mongoose.connection.on("disconnected", function() {
