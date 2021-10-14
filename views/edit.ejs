@@ -6,7 +6,26 @@
     <header>
       <%- include('./partials/nav/_nav') %>
     </header>
+    <div class="form-container">
+      <form action="/foodie/<%= reviews.id %>?_method=PUT" method="POST">
+        <label class="labels" for="restaurant">Restaurant Name</label>
+        <input type="text" placeholder="eg. Jake's Joint" name="restaurant" value="<%= reviews.restaurant %>">
+        <label class="labels" for="rating">Rating</label>
+        <input type="number" min="0" max="5" name="rating" value="<%= reviews.rating %>" required>
+        <label class="labels" for="content">Review Content</label>
+        <textarea name="content" rows="4" value="<%= reviews.content %>" required ></textarea>
+        <label class="labels" for="imageLink">Image Link</label>
+        <input type="text" placeholder="www.imgur.com/" name="imageLink" value="<%= reviews.image %>" required>
+        <label class="labels" for="date">Date</label>
+        <input type="datetime-local" placeholder="10/13/2021" name="date" value="<%= reviews.date %>" required>
+        <label class="labels" for="location">Location</label>
+        <input type="text" placeholder="123 Happy Street, San Francisco, California" name="location" value="<%= reviews.location%>" required>
+        <label class="labels" for="edTags">Tags</label>
+        <input type="text" placeholder="korean,western,(separate with colons)" name="edTags" value="<%= reviews.tags%>">
 
+        <button class="updateButton">Update Review</button>
+      </form>
+    </div>  
   </div>
 </body>
 </html>

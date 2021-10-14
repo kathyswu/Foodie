@@ -39,20 +39,25 @@ router.get("/:id", function (req, res, next){
 
 //New
 router.get("/new", function(req, res){
-  
+  res.render("new");
 });
 
 //Create
 router.post("/", function(req, res, next) {
-  res.send({
-    message: "Create new review",
-    body: req.body,
-  });
-})
+  Review.create(req.body, function (error, newReview){
+    if (error) {
+      console.log(error);
+      req.error = error;
+      return next();
+    }
+    console.log(newReview);
+    res.redirect("/foodie");
+  })
+});
 
 
 
-//Edit
+//Edit route
 router.get("/:id/edit", function(req, res, next){
   Review.findById(req.params.id, function (error, foundReview){
     if (error) {
@@ -68,8 +73,21 @@ router.get("/:id/edit", function(req, res, next){
 });
 
 
-//Update
-router.put("/:id");
+//Update route
+router.put("/:id", function (req, res, next){
+  Review.findByIdAndUpdate(req.params.id, req.body, {new:true},
+    function (error, foundReview){
+    if (error) {
+      console.log(error);
+      req.error = error;
+      return next();
+    }
+    const context = {
+      reviews: foundReview,
+    }
+    res.redirect(`/foodie/${req.params.id}`);
+  })
+});
 
 //Delete route
 router.delete("/:id", function (req, res, next){

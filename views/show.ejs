@@ -28,7 +28,7 @@
       <p><%= reviews.tags[i] %></p>
       <% } %>
       <div class="buttons-container">
-      <a href="/foodie/<%= reviews.id %>" class="edit">Edit Review</a>
+      <a href="/foodie/<%= reviews.id %>/edit" class="edit">Edit Review</a>
       <form action="/foodie/<%= reviews.id %>?_method=DELETE" method="POST">
         <input class="delete" type="submit" value="Delete Review">
       </form>
