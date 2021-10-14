@@ -9,7 +9,7 @@
   <div class="gallery-container">
     <% for (let i = 0; i < reviews.length; i++) {%>
     <% const review = reviews[i]; %>
-      <article class="review-card">
+      <article class="review-card"> 
         <div class="image">
           <img src="<%= review.image %>">
         </div>
@@ -37,9 +37,9 @@
             <p><%= review.tags[i] %></p>
             <% } %>
           </div>
-        </a>
+          </a>
       </div>
-      </article>
+    </article>
     <% } %>
   </div>
 </div>
