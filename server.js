@@ -1,6 +1,7 @@
 // --- External Modules
 const express = require("express");
 const methodOverride = require("method-override");
+const helmet = require("helmet");
 
 // --- Internal Modules
 const reviewsController = require("./controller/reviewsController");
@@ -10,6 +11,15 @@ const app = express();
 const PORT = 4000;
 
 // --- System Configuration
+
+// Base security and set imgur content security policy
+app.use(
+  helmet({
+    contentSecurityPolicy: false,
+    }
+  )
+);
+
 
 // Database Connection
 require("./config/db.connection");

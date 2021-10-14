@@ -20,6 +20,26 @@ router.get("/", function(req, res, next) {
   })
 });
 
+//New
+router.get("/new", function(req, res){
+  res.render("new");
+});
+
+//Create
+router.post("/", function(req, res, next) {
+  const data = req.body;
+  data.tags = data.tags.split(",")
+  Review.create(data, function (error, newReview){
+    if (error) {
+      console.log(error);
+      req.error = error;
+      return next();
+    }
+    console.log(newReview);
+    res.redirect("/");
+  })
+});
+
 //Show route
 router.get("/:id", function (req, res, next){
   Review.findById(req.params.id, function(error, foundReview){
@@ -37,23 +57,6 @@ router.get("/:id", function (req, res, next){
 });
 
 
-//New
-router.get("/new", function(req, res){
-  res.render("new");
-});
-
-//Create
-router.post("/", function(req, res, next) {
-  Review.create(req.body, function (error, newReview){
-    if (error) {
-      console.log(error);
-      req.error = error;
-      return next();
-    }
-    console.log(newReview);
-    res.redirect("/foodie");
-  })
-});
 
 
 
