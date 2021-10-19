@@ -2,13 +2,14 @@
 const express = require("express");
 const methodOverride = require("method-override");
 const helmet = require("helmet");
+require("dotenv").config();
 
 // --- Internal Modules
 const reviewsController = require("./controller/reviewsController");
 
 // --- System Variables
 const app = express();
-const PORT = 4000;
+const PORT = process.env.PORT;
 
 // --- System Configuration
 

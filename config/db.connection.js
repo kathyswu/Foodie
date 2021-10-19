@@ -1,10 +1,9 @@
 // require mongoose
 const mongoose = require("mongoose");
 
-// mongoose variables
-const MONGOOSE_URI = "mongodb://localhost:27017/foodie";
+require("dotenv").config();
 
-mongoose.connect(MONGOOSE_URI);
+mongoose.connect(process.env.MONGODB_URI);
 
 // connection messages
 mongoose.connection.on("connected", function() {
